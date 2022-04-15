@@ -164,7 +164,6 @@ function Modal({coinId}:IModalProps){
     const {scrollY}=useViewportScroll();
     const {data:coin, isLoading}=useQuery<ICoinInfoProps>(["info", coinId], ()=>getCoinInfo(coinId)) ;
     const {data:ticker, isLoading:tickerLoading}=useQuery<ITickerProps>(["ticker", coinId],()=>getCoinTicker(coinId));
-    console.log(ticker);
     return (
         <Container style={{top:scrollY.get()+150}} transition={{type:"linear"}}  layoutId={coinId}>
             <Title>{coin?.name}</Title>

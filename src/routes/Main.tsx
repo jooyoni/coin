@@ -122,6 +122,7 @@ function Main(){
     const onChange=(event:React.FormEvent<HTMLInputElement>)=>{
         setSearch(event.currentTarget.value);
     }
+    console.log(data);
     return(
         <Container> 
         <Title>
